@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Космический кликер</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- build.ps1 подставляет сюда SDK площадки (Яндекс или VK) -->
+  <script src="vk-bridge.min.js"></script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div id="app">
+    <header id="top">
+      <div class="dust-box">
+        <i class="star"></i>
+        <div>
+          <div id="dust">0</div>
+          <div id="dps">0</div>
+        </div>
+      </div>
+      <button id="sound-btn" class="icon-btn" aria-label="sound"></button>
+    </header>
+
+    <main id="stage">
+      <div id="planet-name"></div>
+      <div id="hint"></div>
+      <button id="boost-btn" class="ad-btn"></button>
+    </main>
+
+    <section id="panel">
+      <div class="tabs">
+        <button class="tab active" data-tab="up" id="tab-up"></button>
+        <button class="tab" data-tab="planets" id="tab-planets"></button>
+      </div>
+      <div id="list"></div>
+    </section>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="card">
+      <h2 id="m-title"></h2>
+      <p id="m-text"></p>
+      <div class="m-amount"><i class="star big"></i><span id="m-amount"></span></div>
+      <div class="m-btns">
+        <button id="m-x2" class="ad-btn"></button>
+        <button id="m-take" class="btn2"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="platform.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
